@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+  font-family: $font-main-family, Helvetica, Arial, sans-serif;
+  overflow-wrap: break-word;
+  text-size-adjust: none;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  /*
+  * Add smooth scrolling behavior when focused within the html element
+  * https://css-tricks.com/fixing-smooth-scrolling-with-find-on-page/
+  */
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}

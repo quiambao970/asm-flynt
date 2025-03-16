@@ -1,0 +1,144 @@
+.asm-pre-head{
+    background-color: $black-color;
+    padding-block: 15px;
+    padding-inline: 80px;
+
+    a{
+        font-size: 15px;
+        font-weight: 600;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.asm-head{
+    background-color: rgba($black-color, .69);
+}
+
+.asm-pre-head-phone{
+    a{
+        color: $white-color;
+    }
+
+    a+a{
+        margin-inline-start: 15px;
+    }
+
+    span{
+        block-size: 11px;
+        display: inline-block;
+        inline-size: 11px;
+    }
+}
+
+.asm-pre-head-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.asm-pre-head-nav{
+    ul{
+        display: flex;
+    }
+
+    li{
+        padding-block: 0;
+        padding-inline: 15px;
+        position: relative;
+    }
+
+    li+li{
+        &::before{
+            color: $gray-color;
+            content: '/';
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            position: absolute;
+        }
+    }
+
+    a{
+        color: $gray-color;
+        transition: color 0.2s ease-in-out;
+
+        &:hover{
+            color: $white-color;
+        }
+    }
+}
+
+.asm-pre-head-social{
+    margin-inline-start: 40px;
+
+    ul{
+        align-items: center;
+        display: flex;
+    }
+
+    a{
+        display: flex;
+
+        &:hover{
+            path{
+                fill: $blue-color;
+            }
+        }
+    }
+
+    path {
+        fill: $white-color;
+        transition: fill .2s ease-out;
+    }
+
+    li+li{
+        margin-inline-start: 20px;
+    }
+}
+
+.asm-pre-head-social-facebook{
+    block-size: 14px;
+    inline-size: 13px;
+}
+
+.asm-pre-head-social-pinterest{
+    block-size: 14px;
+    inline-size: 11px;
+}
+
+.asm-pre-head-social-instagram{
+    block-size: 13px;
+    inline-size: 13px;
+}
+
+.asm-pre-head-social-youtube{
+    block-size: 11px;
+    inline-size: 15px;
+}
+
+.asm-pre-head-right{
+    align-items: center;
+    display: flex;
+}
+
+.asm-head-nav{
+
+    & > ul {
+        display: flex;
+        justify-content: space-between;
+
+        & > li {
+
+            a{
+                color: $white-color;
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.asm-head-nav-sub{
+    display: none;
+}
