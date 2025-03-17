@@ -21,5 +21,15 @@ add_filter('Flynt/addComponentData?name=SiteHeader', function (array $data): arr
     $data['instagram_url'] = Options::getGlobal('Website Settings', 'instagram_url');
     $data['youtube_url'] = Options::getGlobal('Website Settings', 'youtube_url');
 
+    $data['logo'] = [
+        'src' => Asset::requireUrl('assets/images/asm-logo.webp'),
+        'alt' => get_bloginfo('name')
+    ];
+
+    $data['bbb'] = [
+        'src' => Asset::requireUrl('assets/images/bbb.webp'),
+        'alt' => 'Better Business bureau'
+    ];
+
     return $data;
 });

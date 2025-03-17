@@ -26,26 +26,33 @@
     </div>
 </section>
 <header class="asm-head">
+    <div class="asm-head-logo">
+        <a href="{{ site.link|e('esc_url') }}">
+            <img width="96" height="49" src="{{ logo.src }}" fetchpriority="high" alt="{{ logo.alt }}">
+        </a>
+    </div>
     <div class="asm-container">
         <nav class="asm-head-nav">
             <ul>
                 {% for item in menu.items %}
                     <li class="{{ item.classes | join(' ') }}">
-                        <a href="{{ item.link }}">{{ item.title }}</a>
+                        <a href="{{ item.link }}">{{ item.title }}{% if item.children %}<div class="asm-head-nav-down-arrow">{% include 'Assets/down-arrow.svg' %}</div>{% endif %}</a>
                         {% if item.children %}
                             <div class="asm-head-nav-sub">
                                 <ul>
                                     {% for subitem in item.children %}
                                         <li class="{{ subitem.classes | join(' ') }}">
-                                            <a href="{{ subitem.link }}">{{ subitem.title }}</a>
+                                            <a href="{{ subitem.link }}">{{ subitem.title }}{% if subitem.children %}<div class="asm-head-nav-right-arrow">{% include 'Assets/right-arrow.svg' %}</div>{% endif %}</a>
                                                 {% if subitem.children %}
-                                                    <ul>
-                                                        {% for subsubitem in subitem.children %}
-                                                            <li class="{{ subsubitem.classes | join(' ') }}">
-                                                                <a href="{{ child.link }}">{{ child.title }}</a>
-                                                            </li>
-                                                        {% endfor %}
-                                                    </ul>
+                                                    <div class="asm-head-nav-sub-sub">
+                                                        <ul>
+                                                            {% for subsubitem in subitem.children %}
+                                                                <li class="{{ subsubitem.classes | join(' ') }}">
+                                                                    <a href="{{ subsubitem.link }}">{{ subsubitem.title }}</a>
+                                                                </li>
+                                                            {% endfor %}
+                                                        </ul>
+                                                    </div>
                                                 {% endif %}
                                             </a>
                                         </li>
@@ -57,5 +64,10 @@
                 {% endfor %}
             </ul>
         </nav>
+    </div>
+    <div class="asm-head-bbb">
+        <a target="_blank" href="https://www.bbb.org/us/tx/houston/profile/internet-marketing-services/actual-seo-media-inc-0915-90045053" rel="nofollow">
+            <img width="91" height="34" src="{{ bbb.src }}" fetchpriority="high" alt="{{ bbb.alt }}">
+        </a>
     </div>
 </header>
