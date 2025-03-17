@@ -1,6 +1,6 @@
 <?php
 
-namespace Flynt\Components\NavigationFooter;
+namespace Flynt\Components\SiteFooter;
 
 use Timber\Timber;
 
@@ -10,7 +10,7 @@ add_action('init', function (): void {
     ]);
 });
 
-add_filter('Flynt/addComponentData?name=NavigationFooter', function (array $data): array {
+add_filter('Flynt/addComponentData?name=SiteFooter', function (array $data): array {
     $data['menu'] = Timber::get_menu('navigation_footer') ?? Timber::get_pages_menu();
 
     return $data;

@@ -1,0 +1,52 @@
+.asm-pre-footer{
+    padding: 50px 0;
+    background-color: #f2f3f6;
+}
+
+.asm-pre-footer-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.asm-pre-footer-col{
+
+    h5{
+        font-weight: 600;
+        font-size: 17px;
+        
+        a{
+            color: $black-color;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 30px;
+
+        a{
+            font-weight: 600;
+            color: $blue-color;
+        }
+    }
+    
+    ul{
+        margin: 20px 0;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+
+        a{
+            display: flex;
+            width: 20px;
+        }
+
+        path{
+            fill: $blue-color;
+        }
+    }
+}
