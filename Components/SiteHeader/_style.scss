@@ -121,9 +121,6 @@
 .asm-head {
   background-color: var(--background);
   border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 40;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,14 +186,19 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 15rem;
+  width: 24rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
   background-color: var(--background);
-  border: 1px solid var(--border);
   opacity: 0;
   visibility: hidden;
   transform: translateY(0.5rem);
   transition: all 0.2s;
   z-index: 50;
+  -webkit-transform: translateY(0.5rem);
+  -moz-transform: translateY(0.5rem);
+  -ms-transform: translateY(0.5rem);
+  -o-transform: translateY(0.5rem);
 }
 
 .asm-head-nav > ul > li:hover .asm-head-nav-sub {
