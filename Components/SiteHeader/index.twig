@@ -1,8 +1,8 @@
 <section class="asm-pre-head">
     <div class="asm-pre-head-row">
         <div class="asm-pre-head-phone">
-            <a href="tel:8328340661" aria-label="Main Office (832)834-0661"><span>{% include 'Assets/phone.svg' %}</span> Main Office (832)834-0661</a>
-            <a href="tel:7137375529" aria-label="Sales (713)737-5529"><span>{% include 'Assets/phone.svg' %}</span> Sales (713)737-5529</a>
+            <a href="tel:8328340661" aria-label="Main Office (832)834-0661"><img src="{{ phone.src }}" fetchpriority="high" alt="{{ phone.alt }}" width="11" height="11"/> Main Office (832)834-0661</a>
+            <a href="tel:7137375529" aria-label="Sales (713)737-5529"><img src="{{ phone.src }}" fetchpriority="high" alt="{{ phone.alt }}" width="11" height="11"/> Sales (713)737-5529</a>
         </div>
         <div class="asm-pre-head-right">
             <nav class="asm-pre-head-nav">
@@ -16,10 +16,10 @@
             </nav>
             <div class="asm-pre-head-social">
                 <ul>
-                    <li><a href="{{ facebook_url }}" class="asm-pre-head-social-facebook" aria-label="Facebook">{% include 'Assets/facebook.svg' %}</a></li>
-                    <li><a href="{{ pinterest_url }}" class="asm-pre-head-social-pinterest" aria-label="Pinterest">{% include 'Assets/pinterest.svg' %}</a></li>
-                    <li><a href="{{ instagram_url }}" class="asm-pre-head-social-instagram" aria-label="Instagram">{% include 'Assets/instagram.svg' %}</a></li>
-                    <li><a href="{{ youtube_url }}" class="asm-pre-head-social-youtube" aria-label="YouTube">{% include 'Assets/youtube.svg' %}</a></li>
+                    <li><a href="{{ facebook_url }}" class="asm-pre-head-social-facebook" aria-label="Facebook"><img src="{{ facebook.src }}" fetchpriority="high" alt="{{ facebook.alt }}" /></a></li>
+                    <li><a href="{{ pinterest_url }}" class="asm-pre-head-social-pinterest" aria-label="Pinterest"><img src="{{ pinterest.src }}" fetchpriority="high" alt="{{ pinterest.alt }}" /></a></li>
+                    <li><a href="{{ instagram_url }}" class="asm-pre-head-social-instagram" aria-label="Instagram"><img src="{{ instagram.src }}" fetchpriority="high" alt="{{ instagram.alt }}" /></a></li>
+                    <li><a href="{{ youtube_url }}" class="asm-pre-head-social-youtube" aria-label="YouTube"><img src="{{ youtube.src }}" fetchpriority="high" alt="{{ youtube.alt }}" /></a></li>
                 </ul>
             </div>
         </div>
@@ -36,13 +36,13 @@
             <ul>
                 {% for item in menu.items %}
                     <li class="{{ item.classes | join(' ') }}">
-                        <a href="{{ item.link }}">{{ item.title }}{% if item.children %}<div class="asm-head-nav-down-arrow">{% include 'Assets/down-arrow.svg' %}</div>{% endif %}</a>
+                        <a href="{{ item.link }}">{{ item.title }}{% if item.children %}<div class="asm-head-nav-down-arrow"><img src="{{ down_arrow.src }}" fetchpriority="high" alt="{{ down_arrow.alt }}" /></div>{% endif %}</a>
                         {% if item.children %}
                             <div class="asm-head-nav-sub">
                                 <ul>
                                     {% for subitem in item.children %}
                                         <li class="{{ subitem.classes | join(' ') }}">
-                                            <a href="{{ subitem.link }}">{{ subitem.title }}{% if subitem.children %}<div class="asm-head-nav-right-arrow">{% include 'Assets/right-arrow.svg' %}</div>{% endif %}</a>
+                                            <a href="{{ subitem.link }}">{{ subitem.title }}{% if subitem.children %}<div class="asm-head-nav-right-arrow"><img src="{{ right_arrow.src }}" fetchpriority="high" alt="{{ right_arrow.alt }}" /></div>{% endif %}</a>
                                                 {% if subitem.children %}
                                                     <div class="asm-head-nav-sub-sub">
                                                         <ul>

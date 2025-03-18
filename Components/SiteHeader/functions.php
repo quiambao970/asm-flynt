@@ -31,5 +31,40 @@ add_filter('Flynt/addComponentData?name=SiteHeader', function (array $data): arr
         'alt' => 'Better Business bureau'
     ];
 
+    $data['down_arrow'] = [
+        'src' => Asset::requireUrl('assets/images/header/down-arrow.svg'),
+        'alt' => 'down-arrow'
+    ];
+
+    $data['facebook'] = [
+        'src' => Asset::requireUrl('assets/images/header/facebook.svg'),
+        'alt' => 'facebook'
+    ];
+
+    $data['instagram'] = [
+        'src' => Asset::requireUrl('assets/images/header/instagram.svg'),
+        'alt' => 'instagram'
+    ];
+
+    $data['phone'] = [
+        'src' => Asset::requireUrl('assets/images/header/phone.svg'),
+        'alt' => 'phone'
+    ];
+
+    $data['pinterest'] = [
+        'src' => Asset::requireUrl('assets/images/header/pinterest.svg'),
+        'alt' => 'pinterest'
+    ];
+
+    $data['right_arrow'] = [
+        'src' => Asset::requireUrl('assets/images/header/right-arrow.svg'),
+        'alt' => 'right-arrow'
+    ];
+
+    $data['youtube'] = [
+        'src' => Asset::requireUrl('assets/images/header/youtube.svg'),
+        'alt' => 'youtube'
+    ];
+
     return $data;
 });
