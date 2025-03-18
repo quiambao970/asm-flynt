@@ -52,5 +52,12 @@
 }
 
 .asm-pre-footer-table{
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+
+    div{
+        border-bottom: 1px solid #dee2e6;
+        padding: 10px 0;
+    }
 }
