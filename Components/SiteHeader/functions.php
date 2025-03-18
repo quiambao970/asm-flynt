@@ -13,6 +13,8 @@ add_action('init', function (): void {
     ]);
 });
 
+
+
 add_action('wp_footer', function() {
     ?>
     <script>
@@ -26,7 +28,7 @@ add_action('wp_footer', function() {
                 if (!document.getElementById("mobile-menu-script")) {
                     // Pass phone numbers data to the script
                     window.mobileMenuData = {
-                        phoneNumbers: <?= json_encode(Timber::get_context()['siteHeader']['phoneNumbers'] ?? []); ?>
+                        phoneNumbers: <?= json_encode(Timber::context()['siteHeader']['phoneNumbers'] ?? []); ?>
                     };
 
                     var script = document.createElement("script");
