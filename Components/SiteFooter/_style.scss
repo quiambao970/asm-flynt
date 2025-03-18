@@ -96,3 +96,64 @@
     width: 1px;
     background-color: $white-color;
 }
+
+.asm-footer{
+    background-color: $black-color;
+    padding: 50px 0;
+}
+
+.asm-footer-row{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap: 40px;
+}
+
+.asm-footer-col{
+
+    h3{
+        font-size: 16px;
+        font-weight: 600;
+        color: $white-color;
+        
+        a{
+            color: $white-color;
+        }
+    }
+
+    nav{
+        padding: 20px 0 0 20px;
+
+        li+li{
+            margin-top: 10px;
+        }
+
+        a{
+            color: $blue-color;
+            font-size: 15px;
+            font-weight: 600;
+        }
+    }
+}
+
+.asm-footer-copyright{
+    text-align: center;
+    position: relative;
+    font-size: 15px;
+    padding-top: 50px;
+    font-weight: 400;
+    color: $white-color;
+    border-top: 1px solid rgba($white-color, 0.1)
+}
+
+.asm-footer-rating{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: $white-color;
+    line-height: 30px;
+
+    p{
+        margin-top: 20px;
+    }
+}
