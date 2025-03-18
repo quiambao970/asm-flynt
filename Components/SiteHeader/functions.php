@@ -32,7 +32,7 @@ add_action('wp_footer', function() {
                     var script = document.createElement("script");
                     script.id = "mobile-menu-script";
                     script.src = "<?= Asset::requireUrl('Components/SiteHeader/mobileMenu.js') ?>";
-                    script.async = true;
+                    script.async = false;
                     document.body.appendChild(script);
                 }
             }
