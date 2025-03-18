@@ -5,7 +5,9 @@ import globImporter from 'node-sass-glob-importer'
 import FullReload from 'vite-plugin-full-reload'
 import fs from 'fs'
 
-const wordpressHost = 'http://local.asm'
+require('dotenv').config()
+
+const wordpressHost = process.env.APP_URL
 
 const dest = './dist'
 const entries = [
