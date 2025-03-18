@@ -7,12 +7,16 @@ use Timber\Timber;
 
 add_action('init', function (): void {
     register_nav_menus([
-        'navigation_footer' => __('Navigation Footer', 'flynt')
+        'navigation_footer_1' => __('Navigation Footer 1', 'flynt'),
+        'navigation_footer_2' => __('Navigation Footer 2', 'flynt'),
+        'navigation_footer_3' => __('Navigation Footer 3', 'flynt'),
     ]);
 });
 
 add_filter('Flynt/addComponentData?name=SiteFooter', function (array $data): array {
-    $data['menu'] = Timber::get_menu('navigation_footer') ?? Timber::get_pages_menu();
+    $data['menu_1'] = Timber::get_menu('navigation_footer_1') ?? Timber::get_pages_menu();
+    $data['menu_2'] = Timber::get_menu('navigation_footer_2') ?? Timber::get_pages_menu();
+    $data['menu_3'] = Timber::get_menu('navigation_footer_3') ?? Timber::get_pages_menu();
 
     $data['facebook'] = [
         'src' => Asset::requireUrl('assets/images/footer/facebook.svg'),
@@ -57,6 +61,11 @@ add_filter('Flynt/addComponentData?name=SiteFooter', function (array $data): arr
     $data['phone'] = [
         'src' => Asset::requireUrl('assets/images/footer/blue-phone.svg'),
         'alt' => 'phone'
+    ];
+
+    $data['bbb'] = [
+        'src' => Asset::requireUrl('assets/images/footer/bbb.svg'),
+        'alt' => 'BBB logo'
     ];
 
     return $data;

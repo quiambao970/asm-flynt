@@ -27,7 +27,7 @@ add_filter('Flynt/addComponentData?name=SiteHeader', function (array $data): arr
     ];
 
     $data['bbb'] = [
-        'src' => Asset::requireUrl('assets/images/bbb.webp'),
+        'src' => Asset::requireUrl('assets/images/footer/bbb.svg'),
         'alt' => 'Better Business bureau'
     ];
 

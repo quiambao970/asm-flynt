@@ -143,3 +143,52 @@
         </div>
     </div>
 </section>
+<footer class="asm-footer">
+    <div class="asm-container">
+        <div class="asm-footer-row">
+            <div class="asm-footer-col">
+                <h3>Explore</h3>
+                <nav>
+                    <ul>
+                        {% for item in menu_1.items %}
+                            <li class="{{ item.classes | join(' ') }}">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="asm-footer-col">
+                <h3><a href="mailto:info@actualseomedia.com">info@actualseomedia.com</a></h3>
+                <nav>
+                    <ul>
+                        {% for item in menu_2.items %}
+                            <li class="{{ item.classes | join(' ') }}">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+            <div class="asm-footer-col">
+                <h3><a href="mailto:info@actualseomedia.com">info@actualseomedia.com</a></h3>
+                <nav>
+                    <ul>
+                        {% for item in menu_3.items %}
+                            <li class="{{ item.classes | join(' ') }}">
+                                <a href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="asm-footer-rating">
+            <img class="lazyload" data-src="{{ bbb.src }}" alt="{{ bbb.alt }}" width="150" width="53"/>
+            <p>BBB Rating: A+<br>As of 10/2/2024<br/><a href="https://www.bbb.org/us/tx/houston/profile/internet-marketing-services/actual-seo-media-inc-0915-90045053" style="text-decoration:none;color:white;">Click for Profile</a></p>
+        </div>
+        <div class="asm-footer-copyright">
+            &copy;Copyright {{ "now"|date("Y") }} by Actual SEO Media Inc.
+        </div>
+    </div>
+</footer>
