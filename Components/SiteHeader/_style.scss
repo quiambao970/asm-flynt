@@ -83,17 +83,6 @@
 
     a{
         display: flex;
-
-        &:hover{
-            path{
-                fill: $blue-color;
-            }
-        }
-    }
-
-    path {
-        fill: $white-color;
-        transition: fill .2s ease-out;
     }
 
     li+li{
