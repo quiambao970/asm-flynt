@@ -44,5 +44,20 @@ add_filter('Flynt/addComponentData?name=SiteFooter', function (array $data): arr
         'alt' => 'youtube'
     ];
 
+    $data['address'] = [
+        'src' => Asset::requireUrl('assets/images/footer/blue-address.svg'),
+        'alt' => 'address'
+    ];
+
+    $data['mail'] = [
+        'src' => Asset::requireUrl('assets/images/footer/blue-mail.svg'),
+        'alt' => 'mail'
+    ];
+
+    $data['phone'] = [
+        'src' => Asset::requireUrl('assets/images/footer/blue-phone.svg'),
+        'alt' => 'phone'
+    ];
+
     return $data;
 });
