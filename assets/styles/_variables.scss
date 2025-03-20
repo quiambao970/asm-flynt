@@ -1,6 +1,27 @@
 $font-main-family: 'Inter';
 
-$black-color: #18191c;
-$white-color: #fff;
-$gray-color: #808287;
-$blue-color: #14a89e;
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --primary: #14a89e;
+  --primary-foreground: #f8fafc;
+  --radius: 0;
+
+  --footer-bg-light: #f2f3f6;
+  --footer-black: #151518;
+  --footer-blue: #14a89e; /* Matches primary color */
+  --footer-border-light: #dee2e6;
+
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 1rem;      /* 16px */
+  --space-md: 1.5rem;    /* 24px */
+  --space-lg: 2rem;      /* 32px */
+  --space-xl: 3rem;      /* 48px */
+  --space-2xl: 4rem;     /* 64px */
+
+  --container-padding: clamp(1rem, 5vw, 2rem);
+  --container-max-width: 1400px;
+}

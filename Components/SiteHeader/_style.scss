@@ -1,30 +1,12 @@
-:root {
-  --background: #09090b;
-  --foreground: #fafafa;
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
-  --border: #27272a;
-  --primary: #0ea5e9;
-  --primary-foreground: #f8fafc;
-  --radius: 0;
-}
-
 .header-wrapper {
   background-color: var(--background);
-}
-
-.container {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1400px;
-  padding: 0 1rem;
 }
 
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  padding: 8px;
+  padding: var(--space-xs);
   background-color: var(--primary);
   color: white;
   z-index: 100;
@@ -47,15 +29,15 @@
   align-items: center;
   justify-content: space-between;
   height: 2.5rem;
-  max-width: 1400px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--container-padding);
 }
 
 .asm-pre-head-phone {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-md);
 }
 
 .asm-pre-head-phone a {
@@ -104,7 +86,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-left: 1rem;
+  margin-left: var(--space-sm);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -128,9 +110,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
-  padding: 0 1rem;
-  max-width: 1400px;
+  height: var(--space-2xl);
+  padding: 0 var(--container-padding);
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
@@ -166,7 +148,7 @@
   align-items: center;
   gap: 0.25rem;
   height: 100%;
-  padding: 0 1rem;
+  padding: 0 var(--space-sm);
   color: var(--muted-foreground);
   font-weight: 500;
   text-decoration: none;
@@ -193,11 +175,11 @@
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  margin-top: 0.5rem;
+  margin-top: var(--space-xs);
   padding: 0.75rem 0;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(0.5rem);
+  transform: translateY(var(--space-xs));
   transition: all 0.2s ease-out;
   z-index: 50;
 }
@@ -262,7 +244,7 @@
   margin-left: 0.25rem;
   opacity: 0;
   visibility: hidden;
-  transform: translateX(0.5rem);
+  transform: translateX(var(--space-xs));
   transition: all 0.2s ease-out;
   z-index: 51;
 }
@@ -346,7 +328,7 @@
   height: 100vh;
   background-color: var(--background);
   border-left: 1px solid var(--border);
-  padding: 1.5rem;
+  padding: var(--space-md);
   transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
   z-index: 50;
@@ -366,7 +348,7 @@
   border: 1px solid var(--border);
   color: var(--muted-foreground);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--space-xs);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,14 +373,14 @@
 
 /* Menu Items */
 .mobile-nav-item {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-xs);
 }
 
 .mobile-nav-link {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem var(--space-sm);
   color: var(--muted-foreground);
   text-decoration: none;
   border-radius: 0.25rem;
@@ -422,7 +404,7 @@
 /* Dropdown Menus */
 .mobile-dropdown-menu {
   display: none;
-  padding-left: 1rem;
+  padding-left: var(--space-sm);
   margin-top: 0.25rem;
 }
 
@@ -434,7 +416,7 @@
 
 .mobile-dropdown-item {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem var(--space-sm);
   color: var(--muted-foreground);
   text-decoration: none;
   border-radius: 0.25rem;
@@ -451,7 +433,7 @@
 .mobile-menu-divider {
   height: 1px;
   background-color: var(--border);
-  margin: 1rem 0;
+  margin: var(--space-sm) 0;
 }
 
 /* Contact section */
@@ -466,7 +448,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem var(--space-sm);
   color: var(--muted-foreground);
   text-decoration: none;
   border-radius: 0.25rem;
@@ -517,14 +499,7 @@
   }
 }
 
-/* Focus styles */
-a:focus,
-button:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* Responsive styles */
+/* Header Responsive styles */
 @media (max-width: 1024px) {
   .asm-head-nav > ul > li > a {
     padding: 0 0.75rem;
@@ -533,7 +508,7 @@ button:focus {
 }
 
 @media (max-width: 960px) {
-  .asm-container {
+  .primary-nav-container {
     display: none;
   }
 
@@ -565,6 +540,6 @@ button:focus {
 
 @media (min-width: 1400px) {
   .asm-head-nav-sub {
-    margin-top: 0.5rem;
+    margin-top: var(--space-xs);
   }
 }
