@@ -13,6 +13,16 @@ add_action('init', function (): void {
     ]);
 });
 
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script(
+        'site-header-script',
+        get_template_directory_uri() . '/Components/SiteHeader/script.js',
+        [],
+        null,
+        true
+    );
+});
+
 add_filter('Flynt/addComponentData?name=SiteHeader', function (array $data): array {
     $data['menu'] = Timber::get_menu('navigation_main') ?? Timber::get_pages_menu();
     $data['pre_header_menu'] = Timber::get_menu('pre_header_menu') ?? Timber::get_pages_menu();
@@ -68,3 +78,4 @@ add_filter('Flynt/addComponentData?name=SiteHeader', function (array $data): arr
 
     return $data;
 });
+

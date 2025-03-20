@@ -5,7 +5,7 @@ import globImporter from 'node-sass-glob-importer'
 import FullReload from 'vite-plugin-full-reload'
 import fs from 'fs'
 
-const wordpressHost = 'http://local.asm'
+const wordpressHost = 'localhost:10085'
 
 const dest = './dist'
 const entries = [
