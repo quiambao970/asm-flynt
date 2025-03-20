@@ -22,7 +22,7 @@ function getACFLayout(): array
                 'label' => 'List',
                 'name' => 'list',
                 'type' => 'repeater',
-                'layout' => 'table',
+                'layout' => 'row',
                 'sub_fields' => array(
                     array(
                         'label' => 'Question',
@@ -34,7 +34,7 @@ function getACFLayout(): array
                         'name' => 'answer',
                         'type' => 'wysiwyg',
                         'tabs' => 'all',
-                        'toolbar' => 'basic',
+                        'toolbar' => 'default',
                         'media_upload' => 0,
                         'delay' => 1,
                     ),

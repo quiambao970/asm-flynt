@@ -11,11 +11,6 @@ use ACFComposer;
 class Options
 {
     public const OPTION_TYPES = [
-        'translatable' => [
-            'title' => 'Translatable Options',
-            'icon' => 'dashicons-translation',
-            'translatable' => true
-        ],
         'global' => [
             'title' => 'Global Options',
             'icon' => 'dashicons-admin-site',
