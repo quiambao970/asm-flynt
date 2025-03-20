@@ -1,5 +1,4 @@
 import 'vite/modulepreload-polyfill'
-import FlyntComponent from './scripts/FlyntComponent'
 
 import 'lazysizes'
 
@@ -17,8 +16,3 @@ import.meta.glob([
   '!**/screenshot.png',
   '!**/*.md'
 ])
-
-window.customElements.define(
-  'flynt-component',
-  FlyntComponent
-)
