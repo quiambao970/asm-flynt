@@ -1,5 +1,7 @@
 <?php
+
 namespace Flynt\Components\SiteHeader;
+
 use Flynt\Utils\Asset;
 use Timber\Timber;
 use Flynt\Utils\Options;
@@ -66,4 +68,3 @@ add_filter('Flynt/addComponentData?name=SiteHeader', function (array $data): arr
     ];
     return $data;
 });
-
