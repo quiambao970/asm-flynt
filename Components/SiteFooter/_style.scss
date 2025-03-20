@@ -68,8 +68,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
   text-decoration: none;
 }
 
@@ -208,7 +206,6 @@
   transform: translateX(4px);
 }
 
-/* Rating section */
 .asm-footer-rating {
   padding: var(--space-lg) 0;
   text-align: center;
