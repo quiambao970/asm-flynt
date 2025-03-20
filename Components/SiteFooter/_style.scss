@@ -37,7 +37,7 @@
 
 .asm-pre-footer-col p {
   font-size: 0.875rem; /* 14px */
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0 0 var(--space-xs) 0;
   color: #555;
 }
@@ -113,11 +113,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
 }
 
 .asm-footer-cta-col span {
