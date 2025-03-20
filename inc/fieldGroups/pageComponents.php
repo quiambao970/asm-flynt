@@ -15,6 +15,7 @@ add_action('Flynt/afterRegisterComponents', function (): void {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\FaqSection\getACFLayout(),
                 ],
             ],
         ],
